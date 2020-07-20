@@ -1,0 +1,112 @@
+<<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mission to Mars</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Add Jumbotron to Header -->
+      <div class="jumbotron text-center">
+        <h1>Mission To Mars</h1>
+        <!--Create Bootstrap Table-->
+        <div class="container">
+          <h4>Image Table</h4>
+          <table class="table">
+            <thead>
+              <tr>
+                <th> Image Url</th>
+                <th> Image Title</th>
+              </tr>
+            </thead>
+          </table>
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            img {
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              padding: 5px;
+              width: 150px;
+            }
+            
+            img:hover {
+              box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+            }
+            </style>
+            </head>
+            <body>
+            
+            <h2>Thumbnail Images</h2>
+            <p>Click on the image to enlarge it.</p>
+            
+            <a target="_blank" href="cerberus_enhanced.tiff">
+              <img src="cerberus_enhanced.tiff" alt="cerberus_enhanced.tiff" style="width:150px">
+            </a>
+            <a target="_blank" href="schiaparelli_enhanced.tiff">
+              <img src="schiaparelli_enhances.tiff" alt="schiaparelli_enhances.tiff" style="width:150px">
+            <a
+            target="_blank" href="syrtis_major.tiff">
+              <img src="syrtis_major.tiff" alt="syrtis_major.tiff" style="width:150px">
+            <a
+            target="_blank" href="valles_marineris.tiff">
+              <img src="valles_marineris.tiff" alt="valles_marineris.tiff" style="width:150px">
+
+            </body>
+        </div>
+        <!-- Add a button to activate scraping script -->
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+      </div>
+      <!-- Add section for Mars Hemisphere Images -->
+      <div class="wide-image-wrapper" id="wide-image">
+        <div class="col-md-12">
+          <div class="media">
+            <div class="media-body">
+              h2>Schiaparelli Hemisphere Enhanced</h2>
+              <h4 class="title">{{schiaparelli_enhanced }}</h4>
+               <p>...</p>
+              <h2>Schiaparelli Hemisphere Enhanced</h2>
+              <h4 class="title">{{schiaparelli_enhanced }}</h4>
+              <p>...</p>
+            </div>
+              <h2>Syrtis Major Hemisphere Enhanced</h2>
+             <h4 class="title">{{syrtis_major_enhanced }}</h4>
+             <p>...</p>
+          </div>
+           <h2>Valles Marineris Hemisphere Enhanced</h2>
+          <h4 class="title">{{valles_marineris_enhanced }}</h4>
+          <p>...</p>
+        </div>
+      </div>
+      <!-- Section for Images and Title table -->
+      <div class="wide-image" id="wide-image-wrapper">
+        <div class="col-md-8">
+          <h2>Featured Mars Image</h2>
+          <img
+            src="{{mars.featured_imag }}"
+            class="img-responsive"
+            alt="Responsive image"
+          />
+        </div>
+        <div class="col-md-4">
+          <!-- Mars Facts -->
+          <div class="row" id="mars-facts">
+            <h4>...</h4>
+            {{ mars.facts | safe }}
+          </div>
+        </div>
+        <!-- Add a button to redirect to app home -->
+        <p><a class="btn btn-primary btn-lg" href="/" role="button">Redirecting</a></p>
+        </div>
+      </div>
+    </div>
+    Template
+  </body>
+</html>
+IMPORTANT
